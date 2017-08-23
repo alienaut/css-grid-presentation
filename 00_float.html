@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Float Layout</title>
+  <script type="text/javascript" src="http://livejs.com/live.js"></script>
+  <style>
+    *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 600px;
+      margin: 0 auto;
+      font: 400 20px sans-serif;
+      color: #fff;
+    }
+
+    div, header, footer {
+      padding: 10px;
+    }
+
+    header {
+      width: 600px;
+      height: 75px;
+      margin: 10px 0;
+      background-color: #5F8247;
+    }
+
+    .wrapper {
+      width: 600px;
+      margin-bottom: 10px;
+      background-color: #A6BBCA;
+    }
+
+    .wrapper:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+      height: 200px;
+      display: inline;
+    }
+
+    .left {
+      float: left;
+      background-color: #8386A3;
+    }
+
+    .right {
+      float: right;
+      background-color: #E0785E;
+    }
+
+    footer {
+      width: 600px;
+      height: 100px;
+      background-color: #CF9296;
+    }
+  </style>
+</head>
+<body>
+  <header>header</header>
+
+  <div class="wrapper">
+    <div class="left">.left</div>
+    <div class="right">.right</div>
+  </div>
+
+  <footer>footer</footer>
+</body>
+</html>
