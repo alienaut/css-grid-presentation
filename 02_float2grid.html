@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Float To Grid</title>
+
+  <style>
+    *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    div, header, footer {
+      padding: 10px;
+    }
+
+    body {
+      width: 600px;
+      margin: 10px auto;
+      font: 500 20px sans-serif;
+      color: #fff;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 3fr 8fr 4fr;
+
+      grid-template-areas:
+        "header header"
+        "left right"
+        "footer footer";
+
+      grid-gap: 10px;
+    }
+
+    header {
+      grid-area: header;
+      height: 75px;
+      background-color: #5F8247;
+    }
+
+    .left {
+      grid-area: left;
+      background-color: #8386A3;
+    }
+
+    .right {
+      grid-area: right;
+      background-color: #E0785E;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #CF9296;
+    }
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <div class="left">.left</div>
+  <div class="right">.right</div>
+  <footer>footer</footer>
+</body>
+</html>
